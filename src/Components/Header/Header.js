@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { AppContext } from '../../AppContext'
 import closeImg from './closeIcon.png'
 import greenOnImg from './greenOn.png'
+import optionsicon from './options.png'
+
 
 const Container = styled.div`
     display:flex;
@@ -19,6 +21,7 @@ const Text = styled.div`
     font-weight: 500;
     padding-top: 2px;
     margin-left: 8px;
+    margin-right: ${props => props.iconOptions ? "117px" : "0"};
 `
 
 const CloseButton = styled.button`
@@ -30,7 +33,6 @@ background-size: 24px;
 background-color: white;
 border: 0;
 padding-bottom:20px;
-margin-left:117px;
 `
 
 const IconOn = styled.div`
@@ -43,6 +45,11 @@ background-color: white;
 margin-top: 7px;
 margin-left: 7px;
 `
+const OptionsIcon = styled.div`
+width: 25px;
+background-image: url(${optionsicon});background-repeat: no-repeat;
+background-size: 20px;
+`
 
 function Header() {
     const [pageIndex,setPageIndex,open,setOpen] = useContext(AppContext)
@@ -54,8 +61,9 @@ function Header() {
 
     return (
         <Container>
-           <Text>gigaaa Al Assistant</Text>
+           <Text iconOptions>gigaaa Al Assistant</Text>
            {pageIndex !== '2/guest' && <IconOn />}
+           {pageIndex ==='2/guest' && <OptionsIcon />}
             <CloseButton onClick={onClick}/>
         </Container>
     )

@@ -22,8 +22,8 @@ background-size: ${props => props.voice ? 18 : 23}px;
 background-position:center;
 width:100%;
 height:25px;
+border: 1px solid lightgray;
 `
-
 
 function NavLinks() {
     return (
