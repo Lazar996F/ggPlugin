@@ -37,7 +37,7 @@ function LoginContent() {
         const onClick = (e) => {
              setPageIndex(e.target.value)
         }
-        
+
     return (
     <React.Fragment>
         <Container>

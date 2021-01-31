@@ -7,14 +7,12 @@ import FingerPrintButton from './FingerPrintButton'
 
 
 
-
 function App() {
-
   return (
   <AppProvider>
     <div className="App">
     <Box>
-      <Header/>
+      <Header />
       <ContentRenderer />
     </Box>
     <FingerPrintButton />

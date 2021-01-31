@@ -1,20 +1,27 @@
-import React,{useContext} from 'react'
+import React,{ useContext } from 'react'
 import {AppContext} from '../AppContext'
 import StartConversation from './StartConversation/StartConversation'
 import LoginContent from './LoginContent/LoginContent'
 import SignUp from './SignUp/SignUp'
+import Chat from './ChatBox/Chat'
 
 function ContentRenderer() {
 
     const [pageIndex,] = useContext(AppContext)
-
-    return (
-    <React.Fragment>
-       {pageIndex === '1' && <StartConversation /> }
-       {pageIndex === '2' && <LoginContent /> }
-       {pageIndex === '3' && <SignUp />}
-    </React.Fragment>
-    )
+    
+        switch (pageIndex) {
+            case '1':
+                return <StartConversation />
+            case '2':
+                return <LoginContent />
+            case '3':
+                return <SignUp />
+            case '2/guest':
+                return <Chat />
+            default:
+                break;
+        }
 }
 
 export default ContentRenderer
+

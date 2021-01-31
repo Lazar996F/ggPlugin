@@ -20,13 +20,14 @@ const Word = styled.div `
 `
 
 // passing value={3} (index 3 for SignUp) for rendering component SignUp
+//passing value = 2/guest index for Continue as guest rendering
 
 function SubLinks(props) {
     return (
         <Container>
             <Button onClick={props.onClick} value={3}>Sign Up</Button>
             <Word>or</Word>
-            <Button>Continue as Guest</Button>
+            <Button onClick={props.onClick} value="2/guest">Continue as Guest</Button>
         </Container>
     )
 }

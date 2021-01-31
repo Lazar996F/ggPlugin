@@ -15,6 +15,7 @@ const Label = styled.label`
     padding: 2px 18px;
 `
 function RadioButtons({handleChange}) {
+
     return (
     <Container class="control">
         <Label class="radio">

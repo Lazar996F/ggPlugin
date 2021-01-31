@@ -45,16 +45,17 @@ margin-left: 7px;
 `
 
 function Header() {
-    const [ , ,open,setOpen] = useContext(AppContext)
+    const [pageIndex,setPageIndex,open,setOpen] = useContext(AppContext)
 
     const onClick = () => {
         setOpen(false)
+        setPageIndex('1')
     }
 
     return (
         <Container>
            <Text>gigaaa Al Assistant</Text>
-           <IconOn />
+           {pageIndex !== '2/guest' && <IconOn />}
             <CloseButton onClick={onClick}/>
         </Container>
     )

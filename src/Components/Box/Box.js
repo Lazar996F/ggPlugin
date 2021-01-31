@@ -4,14 +4,15 @@ import {AppContext} from '../../AppContext'
 
 const Container = styled.div`
     position: fixed;
-    right: 18px;
+    right: 20px;
     bottom: 78px;
     width: 320px;
     padding-bottom: 25px;
     border: 0px solid #1C6EA4;
-    border-radius: 20px 20px 0px 20px;
-    -webkit-box-shadow: -8px 5px 17px 5px rgba(192,192,193,0.49); 
-    box-shadow: -8px 5px 17px 5px rgba(192,192,193,0.49);
+    border-radius: 15px 15px 0px 15px;
+    -webkit-box-shadow: -1px -4px 5px 0px rgba(108,98,246,1);
+    -moz-box-shadow: -1px -4px 5px 0px rgba(108,98,246,1);
+    box-shadow: -1px -4px 5px 0px rgba(108,98,246,1);
     display: ${props => !props.open ? "none" : "block"}
     `
     
